@@ -2,11 +2,15 @@
 
 Trabalhos do Laboratório de Programação II
 
-[Página dos Labs] (https://sites.google.com/site/prog2ufcg/lp2/programa-20141)
+**[Página dos Labs] (https://sites.google.com/site/prog2ufcg/lp2/programa-20141)**
 
 ======
-###SentWork
+#SentWork
 
 Os trabalhos são enviados no moodle do grupo.
 
-**[Moodle] (https://moodle.embedded.ufcg.edu.br/moodle)**
+[Moodle] (https://moodle.embedded.ufcg.edu.br/moodle)
+
+------
+###Labs
++ Lab03 adicionado.
