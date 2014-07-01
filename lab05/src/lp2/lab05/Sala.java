@@ -8,7 +8,8 @@ public class Sala {
 	public static char OCUPADO;
 	private int num_linhas;
 	private int num_colunas;
-	private int i,j,vazia=0;
+	private int i,j;
+	int vazia=0;
 	
 	Sala(int num_linhas, int num_colunas) throws Exception
 	{
@@ -150,4 +151,19 @@ public class Sala {
 		return true;
 	}
 	
+	public int getNum_linhas() {
+		return num_linhas;
+	}
+
+	public void setNum_linhas(int num_linhas) {
+		this.num_linhas = num_linhas;
+	}
+
+	public int getNum_colunas() {
+		return num_colunas;
+	}
+
+	public void setNum_colunas(int num_colunas) {
+		this.num_colunas = num_colunas;
+	}
 }
