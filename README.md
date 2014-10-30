@@ -16,3 +16,5 @@ Os trabalhos são enviados no moodle do grupo.
 + Lab03 adicionado.
 + Lab04 adicionado.
 + Prova1Lab adicionado. //Com problemas
++ Lab05 adicionado. //Só a primeira parte
++ Lab06 adicionado. //Em construção.
