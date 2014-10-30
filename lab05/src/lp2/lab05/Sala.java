@@ -1,3 +1,13 @@
+/**
+ * Pedro Alcântara
+ * Mat.: 113210435
+ * 
+ * PS.: apenas parte 1 enviada pois o HD do meu laptop acaba de queimar
+ * e essa foi a ultima parte que eu enviei para o github.
+ * Enviado do computador de um colega.
+ * 
+ */
+
 package lp2.lab05;
 
 import java.util.Arrays;

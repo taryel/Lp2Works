@@ -21,7 +21,8 @@ public class Fibonacci {
 	 * 
 	 * @param n O numero inicial da sequencia.
 	 */
-	public Fibonacci (int n) {
+	public Fibonacci (int n) 
+	{
 		this.n = n;
 		nextFibo = 0;
 		prevFibo = 0;
@@ -33,7 +34,8 @@ public class Fibonacci {
 	 * 
 	 * @return O primeiro numero da sequencia Fibonacci.
 	 */
-	public int primeiroFibo() {
+	public int primeiroFibo() 
+	{
 		return n + n-1;
 	}
 	
@@ -44,13 +46,18 @@ public class Fibonacci {
 	 * 
 	 * @return O n-esimo termo calculado, ou o primeiro termo, caso "termo" == 1.
 	 */
-	public int termoFibo(int termo) {
-		for (int i = 1; i <= termo; i++) { 
-			if (i == 1) {
+	public int termoFibo(int termo) 
+	{
+		for (int i = 1; i <= termo; i++) 
+		{ 
+			if (i == 1) 
+			{
 				nextFibo = 1; 
 				prevFibo = 0;
 				
-			} else { 
+			} 
+			else 
+			{ 
 				nextFibo += prevFibo; 
 				prevFibo = nextFibo - prevFibo; 
 			} 
@@ -65,14 +72,18 @@ public class Fibonacci {
 	 * 
 	 * @return a string (formato: [termo1, termo2, ..., termon] representando os termos gerados.
 	 */
-	public java.lang.String geraTermosFibo(int termos) {
-		for (int i = 1; i <= termos; i++) { 
+	public java.lang.String geraTermosFibo(int termos) 
+	{
+		for (int i = 1; i <= termos; i++) 
+		{ 
 			if (i == 1) {
 				nextFibo = 1; 
 				prevFibo = 0;
 				valoresFibo += nextFibo + " ";
 				
-			} else { 
+			} 
+			else 
+			{ 
 				nextFibo += prevFibo; 
 				prevFibo = nextFibo - prevFibo;
 				valoresFibo += nextFibo + " ";

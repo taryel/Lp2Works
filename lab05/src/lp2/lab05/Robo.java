@@ -1,3 +1,13 @@
+/**
+ * Pedro Alcântara
+ * Mat.: 113210435
+ * 
+ * PS.: apenas parte 1 enviada pois o HD do meu laptop acaba de queimar
+ * e essa foi a ultima parte que eu enviei para o github.
+ * Enviado do computador de um colega.
+ * 
+ */
+
 package lp2.lab05;
 
 public class Robo 
@@ -24,6 +34,8 @@ public class Robo
 		if(sala.isVazia())
 		{
 			sala.lugares[0][0] = ROBO;
+			posicaoRobo[0] = 0;
+			posicaoRobo[1] = 0;
 			sala.vazia++;
 		}
 		if(!(sala.isVazia()) && sala.lugares[0][0] == Sala.OCUPADO)
@@ -45,6 +57,8 @@ public class Robo
 				else if(sala.lugares[i][j] == Sala.LIVRE)
 				{
 					sala.lugares[i][j] = ROBO;
+					posicaoRobo[0] = i;
+					posicaoRobo[1] = j;
 				}
 			}
 		}
@@ -70,6 +84,6 @@ public class Robo
 	}
 	public void andaFrente()
 	{
-		
+		posicaoRobo[1] += 1;
 	}
 }

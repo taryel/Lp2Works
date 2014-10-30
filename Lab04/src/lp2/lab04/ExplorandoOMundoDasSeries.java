@@ -17,12 +17,14 @@ public class ExplorandoOMundoDasSeries {
 	public static ProgressaoAritmetica pa;
 	public static Fibonacci fibo;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		Scanner input = new Scanner(System.in);
 		System.out.println(PROMPT);
 		opcao = input.nextInt();
 		
-		while (opcao != FECHA) {
+		while (opcao != FECHA) 
+		{
 			casoUmDois(opcao);
 			casoTresQuatro(opcao);
 			casoCinco(opcao);
@@ -34,8 +36,10 @@ public class ExplorandoOMundoDasSeries {
 	}
 	
 	//caso o usuario escolha a opcao 1 ou 2 aqui sao criadas a PA ou a sequencia Fibonacci
-	public static void casoUmDois(int opcao) {
-		switch (opcao) {
+	public static void casoUmDois(int opcao) 
+	{
+		switch (opcao) 
+		{
 		
 		case 1: System.out.println("Digite o primeiro numero da Progressao:");
 				primeiro = input.nextInt();
@@ -54,9 +58,11 @@ public class ExplorandoOMundoDasSeries {
 	}
 	
 	//caso o usuario selecione a opcao 3 ou 4 esse metodo eh ativado
-	public static void casoTresQuatro(int opcao) {
+	public static void casoTresQuatro(int opcao) 
+	{
 		
-		switch (opcao) {
+		switch (opcao) 
+		{
 		case 3:do {
 			System.out.println("Favor criar uma Progressao primeiro");
 			casoUmDois(1);

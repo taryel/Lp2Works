@@ -26,7 +26,8 @@ public class ProgressaoAritmetica {
 	 * @param razao
 	 * 					A razao da progressao aritmetica
 	 */
-	public ProgressaoAritmetica(int primeiro, int razao) {
+	public ProgressaoAritmetica(int primeiro, int razao) 
+	{
 		this.primeiro = primeiro;
 		this.razao = razao;
 		enesimo = primeiro();
@@ -40,7 +41,8 @@ public class ProgressaoAritmetica {
 	 * 
 	 * @return A razao da PA.
 	 */
-	public int getRazao() {
+	public int getRazao() 
+	{
 		return razao;
 	}
 	
@@ -49,7 +51,8 @@ public class ProgressaoAritmetica {
 	 * 
 	 * @return O proximo termo da progessao aritmetica.
 	 */
-	public int proximo() {
+	public int proximo() 
+	{
 		valorProximo *= razao;
 		return valorProximo;
 	}
@@ -61,8 +64,10 @@ public class ProgressaoAritmetica {
 	 * 
 	 * @return O n-esimo termo calculado, ou o primeiro termo, se n <= 0
 	 */
-	public int termo(int n) {
-		for (int i = 2; i <= n; i++) {
+	public int termo(int n) 
+	{
+		for (int i = 2; i <= n; i++) 
+		{
 			enesimo *= 4;
 		}
 		return enesimo;
@@ -73,7 +78,8 @@ public class ProgressaoAritmetica {
 	 * 
 	 * @return O primeiro termo da progressao aritmetica.
 	 */
-	public int primeiro() {
+	public int primeiro() 
+	{
 		return primeiro * razao;
 	}
 	
@@ -84,8 +90,10 @@ public class ProgressaoAritmetica {
 	 * 
 	 * @return string (formato: [termo1, termo2, ..., termon] representando os termos gerados da progressao
 	 */
-	public java.lang.String geraTermos(int n) {
-		for (int i = 1; i <= n - 1; i++) {
+	public java.lang.String geraTermos(int n) 
+	{
+		for (int i = 1; i <= n - 1; i++) 
+		{
 			dota *= 4;
 			valores += dota + " ";
 		}
@@ -93,7 +101,8 @@ public class ProgressaoAritmetica {
 	}
 
 
-	public int getPrimeiro() {
+	public int getPrimeiro() 
+	{
 		return primeiro;
 	}
 }
