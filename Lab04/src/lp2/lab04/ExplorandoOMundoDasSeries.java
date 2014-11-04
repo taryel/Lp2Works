@@ -63,30 +63,36 @@ public class ExplorandoOMundoDasSeries {
 		
 		switch (opcao) 
 		{
-		case 3:do {
-			System.out.println("Favor criar uma Progressao primeiro");
-			casoUmDois(1);
-			regulador = 3;
-			break;
-			} while(regulador != 1);//caso o usuario nao tenha criado uma progressao esse metodo o leva diretamente ao gerador
+		case 3: if(regulador != 1)
+			{
+				System.out.println("Favor criar uma Progressao primeiro");
+				casoUmDois(1);
+				regulador = 3;
+				break;
+			}	
+			
 			System.out.println("Favor digitar qual termo da PA:");
 			termo = input.nextInt();
 			System.out.println(pa.termo(termo) + "\n");//impressao do termo da pa escolhido
 			break;
-		case 4: do {
-			System.out.println("Favor criar uma sequência primeiro");
-			casoUmDois(2);
-			regulador = 4;
-			}while (regulador != 2);//caso o usuario nao tenha criado uma sequencia esse metodo o leva diretamente para o gerador
-			System.out.println("Favor digitar o número inicial da sequência.");
+		case 4: if(regulador != 2)
+			{
+				System.out.println("Favor criar uma sequÃªncia primeiro");
+				casoUmDois(2);
+				regulador = 4;
+				break;
+			}
+			System.out.println("Favor digitar o nÃºmero inicial da sequÃªncia.");
 			termofibo = input.nextInt();
 			System.out.println(fibo.termoFibo(termofibo) + "\n");//impressao do termo escolhido na sequencia
+			break;
 		}
 	}
 	
 	//caso o usuario selecione a opcao 5 esse metodo eh ativado
 	public static void casoCinco(int opcao) {
-		switch (opcao) {
+		switch (opcao) 
+		{
 		case 5: if (regulador == 3 || regulador == 1) { //caso o usuario ja tenha visto algum termo da pa ou criado uma ele pode entao ver a quantidade de termos
 			System.out.println("Favor digitar a quantidade de termos da Progressao que deseja ver:");
 			termo = input.nextInt();
@@ -100,7 +106,7 @@ public class ExplorandoOMundoDasSeries {
 			break;
 			}
 			if (regulador != 3 || regulador != 4 || regulador !=1 || regulador != 2) {// caso o usuario nao tenha criado uma pa ele eh redirecionado
-			System.out.println("Você precisa criar uma progressao ou uma sequencia primeiro!\n");
+			System.out.println("VocÃª precisa criar uma progressao ou uma sequencia primeiro!\n");
 			casoUmDois(opcao);
 			break;
 			}
