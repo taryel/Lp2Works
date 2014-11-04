@@ -89,6 +89,7 @@ public class ExplorandoOMundoDasSeries {
 		}
 	}
 	
+	//comentário
 	//caso o usuario selecione a opcao 5 esse metodo eh ativado
 	public static void casoCinco(int opcao) {
 		switch (opcao) 
