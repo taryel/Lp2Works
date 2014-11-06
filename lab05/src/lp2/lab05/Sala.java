@@ -1,3 +1,4 @@
+
 /*
  * Pedro Alc�ntara
  * Mat.: 113210435
@@ -161,7 +162,15 @@ public class Sala {
 		return num_linhas;
 	}
 
+	public void setNum_linhas(int num_linhas) {
+		this.num_linhas = num_linhas;
+	}
+
 	public int getNum_colunas() {
 		return num_colunas;
+	}
+
+	public void setNum_colunas(int num_colunas) {
+		this.num_colunas = num_colunas;
 	}
 }
