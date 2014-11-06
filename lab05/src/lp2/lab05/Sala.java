@@ -1,11 +1,12 @@
 /*
  * Pedro Alcântara
- * Mat.: 113210435
- *  
+ * Mat.: 113210435 
  */
 
-// essa linha é nova
+//essa linha de comentário foi adicionada agora 06/11.
+
 package lp2.lab05;
+
 
 import java.util.Arrays;
 
