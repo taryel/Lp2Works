@@ -4,6 +4,7 @@
  */
 
 //essa linha de comentário foi adicionada agora 06/11.
+//consegui ler essa linha.
 
 package lp2.lab05;
 
