@@ -1,22 +1,24 @@
-/**
- * Pedro Alcântara
- * Mat.: 113210435
- * 
- * PS.: apenas parte 1 enviada pois o HD do meu laptop acaba de queimar
- * e essa foi a ultima parte que eu enviei para o github.
- * Enviado do computador de um colega.
- * 
+/*
+ * Pedro Alcï¿½ntara
+ * Mat.: 113210435 
  */
 
 package lp2.lab05;
 
+import java.util.*;
+
+
+import javax.swing.plaf.basic.BasicSplitPaneUI.KeyboardDownRightHandler;
+
 public class Robo 
 {
-	
 	private Sala sala;
 	public static char ROBO;
 	private int energia;
 	private int[] posicaoRobo;
+	private Scanner sc = new Scanner(System.in);
+	
+	
 
 	public Robo(Sala sala, int energia)
 	{
@@ -24,7 +26,6 @@ public class Robo
 		Robo.ROBO = 'P';
 		this.energia = 10;
 		posicaoInicialRobo();
-		
 	}
 
 	public void posicaoInicialRobo()
@@ -81,9 +82,5 @@ public class Robo
 			}
 		}
 		return null;
-	}
-	public void andaFrente()
-	{
-		posicaoRobo[1] += 1;
-	}
+	}		
 }

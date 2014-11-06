@@ -1,11 +1,7 @@
-/**
- * Pedro Alcântara
+/*
+ * Pedro Alcï¿½ntara
  * Mat.: 113210435
- * 
- * PS.: apenas parte 1 enviada pois o HD do meu laptop acaba de queimar
- * e essa foi a ultima parte que eu enviei para o github.
- * Enviado do computador de um colega.
- * 
+ *  
  */
 
 package lp2.lab05;
@@ -165,15 +161,7 @@ public class Sala {
 		return num_linhas;
 	}
 
-	public void setNum_linhas(int num_linhas) {
-		this.num_linhas = num_linhas;
-	}
-
 	public int getNum_colunas() {
 		return num_colunas;
-	}
-
-	public void setNum_colunas(int num_colunas) {
-		this.num_colunas = num_colunas;
 	}
 }
