@@ -1,13 +1,14 @@
-
 /*
- * Pedro Alcï¿½ntara
+ * Pedro Alcântara
  * Mat.: 113210435
  *  
  */
 
+// essa linha é nova
 package lp2.lab05;
 
 import java.util.Arrays;
+
 
 public class Sala {
 	public char[][] lugares;
