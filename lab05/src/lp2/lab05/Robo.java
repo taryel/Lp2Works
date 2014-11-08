@@ -7,7 +7,6 @@ package lp2.lab05;
 
 public class Robo 
 {
-	
 	private Sala sala;
 	public static char ROBO;
 	private int energia;
@@ -77,8 +76,51 @@ public class Robo
 		}
 		return null;
 	}
-	public void andaFrente()
+	public void andaFrente() throws Exception
 	{
+		if(posicaoRobo[1] == sala.getNum_colunas())
+		{
+			throw new Exception("Limite da sala, não pode mais andar pra frente");
+		}
 		posicaoRobo[1] += 1;
+		energia -= 1;
+	}
+	
+	public void andaTras() throws Exception 
+	{
+		if(posicaoRobo[1] == 0)
+		{
+			throw new Exception("Limite da sala, não pode mais andar pra tras");
+		}
+		posicaoRobo[1] -= 1;
+		energia -= 1;
+	}
+	
+	public void andaCima() throws Exception
+	{
+		if(posicaoRobo[0] == 0)
+		{
+			throw new Exception("Limite da sala, não pode mais andar pra cima");
+		}
+		posicaoRobo[0] -= 1;
+		energia -= 1;
+	}
+	
+	public void andaBaixo() throws Exception
+	{
+		if(posicaoRobo[0] == sala.getNum_linhas())
+		{
+			throw new Exception("Limite da sala, não pode mais andar pra baixo");
+		}
+		posicaoRobo[0] += 1;
+		energia -= 1;
+	}
+	
+	public void energiaZero() throws Exception
+	{
+		if(energia == 0)
+		{
+			throw new Exception("A energia zerou :(");
+		}
 	}
 }
