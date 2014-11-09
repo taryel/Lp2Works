@@ -8,7 +8,12 @@ package lp2.lab05;
 
 import java.util.Arrays;
 
-
+/**
+ * Cria uma sala na qual um Robo pode caminhar
+ * 
+ * @author Pedro
+ *
+ */
 public class Sala {
 	public char[][] lugares;
 	public static char LIVRE;
@@ -18,6 +23,17 @@ public class Sala {
 	private int i,j;
 	int vazia=0;
 	
+	/**
+	 * Cria uma Sala
+	 * 
+	 * @param num_linhas
+	 * 			Quantidade de linhas que a sala terá
+	 * @param num_colunas
+	 * 			Quantidade de colunas que a sala terá
+	 * @throws Exception
+	 * 			Lança uma excessão caso o numero de linhas ou o 
+	 * numero de colunas seja menor ou igual a zero
+	 */
 	Sala(int num_linhas, int num_colunas) throws Exception
 	{
 		Sala.OCUPADO = 'X';
@@ -33,6 +49,14 @@ public class Sala {
 		iniciaSala(num_linhas,num_colunas);
 	}
 	
+	/**
+	 * Inicia uma sala de acordo com o numero de linhas e colunas
+	 * 
+	 * @param linhas
+	 * 			Numero de linhas que a sala deve ter
+	 * @param colunas
+	 * 			Numero de colunas que a sala deve ter
+	 */
 	public void iniciaSala(int linhas, int colunas)
 	{
 		lugares = new char[num_linhas][num_colunas];
@@ -45,16 +69,35 @@ public class Sala {
 		}
 	}
 	
+	/**
+	 * Recupera o numero de linhas da sala
+	 * 
+	 * @return
+	 * 		Numero de linhas atual da sala
+	 */
 	public int getNumPosicoesHorizontais()
 	{
 		return num_linhas;
 	}
 	
+	/**
+	 * Recupera o numero de colunas da sala
+	 * 
+	 * @return
+	 * 		Numero de colunas atual da sala
+	 */
 	public int getNumPosicoesVerticais()
 	{
 		return num_colunas;
 	}
 	
+	/**
+	 * Determina se a sala tem ou nao obstaculos
+	 * 
+	 * @return
+	 * 		true se a sala estiver sem obstaculos
+	 * 		false se a sala conter obstaculos
+	 */
 	public boolean isVazia()
 	{
 		if(vazia != 0)
@@ -64,6 +107,17 @@ public class Sala {
 		return true;
 	}
 	
+	/**
+	 * Insere um obstaculo em um determinado ponto da sala
+	 * 
+	 * @param linhaObstaculo
+	 * 			Em qual linha o obstaculo deve ser colocado
+	 * @param colunaObstaculo
+	 * 			Em qual coluna o obstaculo deve ser colocado
+	 * @return
+	 * 			true se o obstaculo for colocado com sucesso
+	 * 			false se houver algum ponto invalido e o obstaulo nao for colocado com sucesso
+	 */
 	public boolean inserirObstaculo(int linhaObstaculo, int colunaObstaculo)
 	{
 		if(linhaObstaculo < 0 || colunaObstaculo < 0)
@@ -82,6 +136,17 @@ public class Sala {
 		}
 	}
 	
+	/**
+	 * Determina se a posicao esta livre ou nao na sala
+	 * 
+	 * @param linhaValida
+	 * 			Linha na qual se quer saber se a posicao e valida
+	 * @param colunaValida
+	 * 			Coluna na qual se que sabr se a posicao e valida
+	 * @return
+	 * 			true se a posicao dada e valida
+	 * 			false se a posica dada nao for valida
+	 */
 	public boolean posicaoValida(int linhaValida,int colunaValida)
 	{
 		
@@ -103,6 +168,19 @@ public class Sala {
 		}
 	}
 	
+	/**
+	 * Determina se a posicao dada contem um obstaculo ou nao
+	 * 
+	 * @param linhaLivre
+	 * 			Linha a qual se quer determinar se a posicao esta livre
+	 * @param colunaLivre
+	 * 			Coluna a qual se quer determinar se a posicao esta livre
+	 * @return
+	 * 			true se a posicao dada estiver livre
+	 * 			false se a posicao dada contiver um obstaculo
+	 * @throws Exception
+	 * 			Lança uma excessao caso a posicao dada foi inexitente
+	 */
 	public boolean isPosicaoLivre(int linhaLivre, int colunaLivre) throws Exception
 	{
 		if(linhaLivre < 0 || colunaLivre < 0)
@@ -120,6 +198,19 @@ public class Sala {
 		return false;
 	}
 	
+	/**
+	 * Determina se uma certa posicao vai estar livre ou nao
+	 * 
+	 * @param linhaPosicao
+	 * 			Linha da posicao que se deseja determinar se esta livre ou ocupada 
+	 * @param colunaPosicao
+	 * 			Coluna da posicao que se deseja determinar se esta livre ou ocupada
+	 * @param statusPosicao
+	 * 			Caractere que determina se a posicao estara livre ou ocupada
+	 * @return
+	 * 			true caso o caractere seja adicionado com sucesso
+	 * 			false caso os parametros passados tenham sido invalidos
+	 */
 	public boolean setPosicao(int linhaPosicao, int colunaPosicao, char statusPosicao)
 	{
 		if(linhaPosicao < 0 || colunaPosicao < 0)
@@ -158,19 +249,24 @@ public class Sala {
 		return true;
 	}
 	
+	/**
+	 * Recupera o numero de linhas da sala
+	 * 
+	 * @return
+	 * 			O numero de linhas da sala
+	 */
 	public int getNum_linhas() {
 		return num_linhas;
 	}
-
-	public void setNum_linhas(int num_linhas) {
-		this.num_linhas = num_linhas;
-	}
-
+	
+	/**
+	 * Recupera o numero de colunas da sala
+	 * 
+	 * @return
+	 * 			O numero de colunas da sala
+	 */
 	public int getNum_colunas() {
 		return num_colunas;
 	}
 
-	public void setNum_colunas(int num_colunas) {
-		this.num_colunas = num_colunas;
-	}
 }
